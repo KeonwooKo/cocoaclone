@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .screen-header__title {
@@ -12,9 +12,12 @@
 }
 
 .screen-header__icons span {
-  margin-right: 25px;
+  margin-left: 25px;
+}
+.screen-header__icons--dot {
   position: relative;
 }
-.screen-header__point {
+.screen-header__icons--point {
   bottom: 15px;
+  left: -0px;
 }

@@ -12,7 +12,7 @@
       <div class="status-bar__column">
         <span>No Service</span>
         <!-- To Do: Wifi icon -->
-        <i class="fa-solid fa-wifi"></i> 
+        <i class="fa-solid fa-wifi"></i>
       </div>
       <div class="status-bar__column">
         <span>18:43</span>
@@ -27,43 +27,81 @@
     </div>
 
     <header class="screen-header">
-      <h1 class="screen-header__title">Chats</h1>
+      <h1 class="screen-header__title">Find</h1>
       <div class="screen-header__icons">
         <span><i class="fa-regular fa-magnifying-glass fa-lg"></i></span>
-        <span><i class="fa-solid fa-gear fa-lg"><span class="screen-header__point dot"></span></i></span>
+        <span class="screen-header__icons--dot">
+          <span class="screen-header__icons--point dot"></span>
+          <i class="fa-solid fa-gear fa-lg"></i>
+        </span>
       </div>
     </header>
 
     <main class="main-screen">
-      <div class="user-component">
-        <div class="user-component__column">
-        <img src="1654361913383_tiger3.png" 
-            class="user-component__avatar user-component__avatar"/>
-        <div class="user-component__text">
-          <h4 class="user-component__title">keonwooko</h4>
-          <h6 class="user-component__subtitle">hushiniubu</h6>
+      <div class="find-icons">
+        <div class="find-icons__icon">
+          <i class="fa-solid fa-qrcode fa-2x"></i><span>QR Code</span>
+        </div>
+        <div class="find-icons__icon">
+          <i class="fa-solid fa-address-book fa-2x"></i
+          ><span>Add by Contacts</span>
+        </div>
+        <div class="find-icons__icon">
+          <i class="fa-solid fa-fingerprint fa-2x"></i><span>Add by ID</span>
+        </div>
+        <div class="find-icons__icon">
+          <i class="fa-solid fa-envelope fa-2x"></i><span>Invite</span>
         </div>
       </div>
-      <div class="user-component__column">
-        <span class="user-component__time">14:11</span>
-        <div class="badge">1</div>
+      <div class="recommended-friends">
+        <h6 class="recommended-friends__title">Recommended Friends</h6>
+        <div>You have no recommended friends.</div>
       </div>
-    </div>
-    </div>
+      <div class="open-chat">
+        <div class="open-chat__header">
+          <h4>Open Chat</h4>
+          <span
+            >Go To Open Chat Home<i class="fa-solid fa-chevron-right fa-xs"></i
+          ></span>
+        </div>
+        <div class="open-post">
+          <div class="open-post__column">
+            <h4 class="open-post__title">#BTS</h4>
+            <h5 class="open-post__hastags">#bts #army #friends</h5>
+            <div class="open-post__members">
+              <img
+                src="http://127.0.0.1:5500/1654361913383_tiger3.png"
+                alt=""
+              />
+              <span class="open-post__members--count">777 members</span>
+              <div class="divider"></div>
+              <span class="open-post__members--status">Activity</span>
+            </div>
+          </div>
+          <div class="open-post__column">
+            <div class="open-post__photo">
+              <img src="http://127.0.0.1:5500/1654361913383_tiger3.png" />
+              <div class="open-post__heart--count">
+                <i class="fa-solid fa-heart fa-xs"></i><span>326</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-
 
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__btn">
           <a class="nav__link" href="friends.html"
-            ><i class="fa-regular fa-user fa-2x"></i></a>
+            ><i class="fa-regular fa-user fa-2x"></i
+          ></a>
         </li>
         <li class="nav__btn">
-          <a class="nav__link" href="chats.html"
-            >
+          <a class="nav__link" href="chats.html">
             <span class="nav__notification badge">1</span>
-            <i class="fa-regular fa-comment fa-2x"></i></a>
+            <i class="fa-regular fa-comment fa-2x"></i
+          ></a>
         </li>
         <li class="nav__btn">
           <a class="nav__link" href="find.html"
@@ -71,11 +109,10 @@
           ></a>
         </li>
         <li class="nav__btn">
-          <a class="nav__link" href="more.html"
-            >
+          <a class="nav__link" href="more.html">
             <span class="dot"></span>
             <i class="fa-solid fa-ellipsis fa-2x"></i>
-        </a>
+          </a>
         </li>
       </ul>
     </nav>

@@ -18,7 +18,7 @@
 }
 .user-component__subtitle {
   margin-top: 5px;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--gray);
   font-size: 17px;
 }
 .user-component__avatar--xl {
