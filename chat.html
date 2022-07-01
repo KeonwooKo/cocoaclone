@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat - Kakao Talk</title>
+  </head>
+  <body id="chat-screen">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <!-- To Do: Wifi icon -->
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>11%</span>
+        <!-- Battery Icon -->
+        <i class="fa-solid fa-battery-full fa-lg"></i>
+        <!-- Lightening Icon -->
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <button class="btn__backback">
+          <i
+            class="fa-solid fa-angle-left fa-2x btn__back"
+            onclick="history.back()"
+          ></i>
+        </button>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">keonwooko</h1>
+      </div>
+      <div class="alt-header__column">
+        <span><i class="fa-regular fa-magnifying-glass fa-lg"></i></span>
+        <span><i class="fa-solid fa-bars fa-lg"></i></span>
+      </div>
+    </header>
+
+    <main class="main-screen main-chat">
+      <div class="chat__timestamp"></div>
+      <div class="message-row">
+        <img src="1654361913383_tiger3.png" alt="" />
+        <div class="message-row__content">
+          <span class="message__author">seungjae LEE</span>
+          <div class="message__chat">
+            <span class="message__buble">Hi!</span>
+            <span class="message__time"></span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__chat">
+            <span class="message__buble">Hi!</span>
+            <span class="message__time"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/493cc16663.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/clock.js"></script>
+  </body>
+</html>
