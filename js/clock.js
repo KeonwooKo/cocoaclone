@@ -1,5 +1,5 @@
 const clock = document.querySelector("div.chat__timestamp");
-const time = document.querySelector("span.message__time");
+const time = document.querySelectorAll("span.message__time");
 
 function getClock() {
   var day_array = new Array(
@@ -38,7 +38,10 @@ function getClock() {
   let minutes = ("0" + today.getMinutes()).slice(-2);
 
   clock.innerText = `${day_label} ,${month_label} ${date}, ${year}`;
-  time.innerText = `${hours}:${minutes}`;
+  let i;
+  for (i = 0; i < time.length; i++) {
+    time[i].innerText = `${hours}:${minutes}`;
+  }
 }
 
 getClock();

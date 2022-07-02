@@ -1,6 +1,6 @@
 #chat-screen {
   background-color: #abc1d1;
-  height: 11000vh;
+  height: 1100vh;
 }
 #chat-screen .alt-header,
 #chat-screen .status-bar {
@@ -17,19 +17,26 @@
   z-index: 1;
   top: 10px;
 }
-
-#chat-screen .btn__back {
-  background-color: #abc1d1;
-}
 .btn__backback {
   background-color: #abc1d1;
   border-radius: 6px;
+}
+@keyframes fadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
 }
 .main-chat {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
 }
 .chat__timestamp {
   color: white;
@@ -71,4 +78,89 @@
 .message__time {
   font-size: 12px;
   opacity: 0.8;
+}
+.message-row--own {
+  justify-content: flex-end;
+}
+.message-row--own .message__chat {
+  flex-direction: row-reverse;
+}
+.message-row--own .message__buble {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 30%;
+  background-color: var(--yellow);
+  margin-left: 5px;
+  margin-right: 0px;
+}
+.reply {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+.reply i {
+  opacity: 0.6;
+}
+.reply__column:first-child {
+  width: 8%;
+}
+.reply__column:last-child {
+  width: 92%;
+  position: relative;
+}
+.reply__column input {
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 15px;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: -18px;
+  top: 4px;
+}
+.reply__column:last-child > i {
+  right: 20px;
+  top: 6px;
+  font-size: 25px;
+}
+.reply__column:last-child button {
+  background-color: var(--yellow);
+  border-radius: 50%;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+.reply__column:last-child button:focus,
+.reply__column:last-child button:active {
+  outline: none;
+}
+.reply__column:last-child button i {
+  opacity: 1;
+}
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-face-grin-beam,
+.reply:focus-within button {
+  transition: opacity 0.3s ease-in-out;
+}
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-face-grin-beam,
+.reply:focus-within button {
+  opacity: 0;
+}
+.reply:focus-within input {
+  width: 98vw;
+  transform: translateX(-10%) translateY(-80px);
+  /* transform: translateY(-80px); */
+}
+.reply:focus-within {
+  transform: translateY(80px);
 }
